@@ -29,6 +29,18 @@ namespace StacksAndQueues
             Console.WriteLine("{0} inserted into queue ", node.data);
 
         }
+        internal void Dqueue()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("The Queue is Emptay");
+            }
+            else
+            {
+                head = head.next;
+
+            }
+        }
         public void DisplayQueue()
         {
             if (head == null)
