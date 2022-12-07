@@ -28,6 +28,39 @@ namespace StacksAndQueues
             this.top = node;
             Console.WriteLine($"{value} pushed to stack");
         }
+        internal void Peak()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("The stack is emptay");
+                return;
+            }
+            else
+            {
+                Console.WriteLine($"{this.top.data} is in the top of the stack");
+            }
+        }
+        internal void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("The stack is Empty");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Value Poped is : "+this.top.data);
+            }
+            this.top = this.top.next;
+        }
+        internal void IsEmpty()
+        {
+            while (this.top != null)
+            {
+                Peak();
+                Pop();
+            }
+        }
         public void Display()
         {
             Node temp = this.top;
@@ -43,6 +76,7 @@ namespace StacksAndQueues
                     temp = temp.next;
                 }
             }
+            Console.WriteLine();
         }
     }
 }

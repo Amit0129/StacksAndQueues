@@ -11,7 +11,9 @@
             stackOperation.Push(70);
             stackOperation.Push(30);
             stackOperation.Push(56);
+            stackOperation.IsEmpty();
             stackOperation.Display();
+            
         }
     }
 }
